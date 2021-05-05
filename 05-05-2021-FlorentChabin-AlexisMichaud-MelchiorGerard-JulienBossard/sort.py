@@ -1,6 +1,8 @@
 import time
 import os.path as path
 
+import datetime
+
 
 def parseLine(line):
     items = line.split()
@@ -29,11 +31,11 @@ def readFile(filename):
                 for item in items:
                     numbers.append(item)
             file.close()
-            merge_sort(numbers, 0, len(numbers) - 1)
+            """merge_sort(numbers, 0, len(numbers) - 1)"""
+            numbers.sort()
+            """shellSort(numbers)"""
             print("list of number sorted: ")
-            time.sleep(0.3)
             for nb in numbers:
-                time.sleep(0.3)
                 print("- " + str(nb))
         else:
             print("file doesnt exist")
@@ -54,11 +56,8 @@ def shellSort(array):
                 j -= gap
             array[j] = temp
         gap //= 2
-    time.sleep(1)
     print("list of number sorted: ")
-    time.sleep(0.5)
     for nb in array:
-        time.sleep(0.3)
         print("- " + str(nb))
 
 
@@ -103,4 +102,7 @@ def merge(array, left_index, right_index, middle):
 
 
 if __name__ == '__main__':
-    readFile("numbers.txt")
+    start_time = datetime.datetime.now()
+    readFile("files/D5A3G9F1G2A7A8E2E8G2E4B2J2J1E7F6F1B7F7.txt")
+    end_time = datetime.datetime.now()
+    print(end_time - start_time)
