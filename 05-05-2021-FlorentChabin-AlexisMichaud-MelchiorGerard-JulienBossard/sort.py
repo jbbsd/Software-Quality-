@@ -103,6 +103,6 @@ def merge(array, left_index, right_index, middle):
 
 if __name__ == '__main__':
     start_time = datetime.datetime.now()
-    readFile("files/D5A3G9F1G2A7A8E2E8G2E4B2J2J1E7F6F1B7F7.txt")
+    readFile("C:/Users/julie/Documents/software-quality/Software-Quality-/05-05-2021-FlorentChabin-AlexisMichaud-MelchiorGerard-JulienBossard/files/D5A3G9F1G2A7A8E2E8G2E4B2J2J1E7F6F1B7F7.txt")
     end_time = datetime.datetime.now()
     print(end_time - start_time)
